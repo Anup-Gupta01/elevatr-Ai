@@ -1,4 +1,4 @@
-import {serve} from "inngest/next";
+import {serve} from "inngest/nextjs";
 import {inngest} from "@/lib/inngest/client";
 import { generateIndustryInsights, helloWorld } from "@/lib/inngest/functions";
 
