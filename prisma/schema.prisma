@@ -40,9 +40,9 @@ model User {
 model Assessment {
   id              String          @id @default(cuid())
   userId          String         
-  user            User            @relation(fields: [userId],references:[id])
+  user            User          @relation(fields: [userId],references:[id])
   quizScore       Float          //overall quiz score 
-  questions       Json[]          // array of {questions,answer,userAnswer,isCorrect} 
+  questions       Json[]         // array of {questions,answer,userAnswer,isCorrect} 
   category        String            
   improvementTip    String?          
   createdAt          DateTime         @default(now())
