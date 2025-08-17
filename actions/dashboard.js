@@ -144,7 +144,9 @@ export async function getIndustryInsights() {
         industry: user.industry || "general",
         ...insights,
         nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-        userId: user.id, // link to user
+        // userId: user.id, // link to user
+       users:{ connect:{id:user.id}
+      }
       },
     });
 
